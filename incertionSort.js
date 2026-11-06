@@ -1,13 +1,19 @@
 const livros = require('./listaLivros');
+const menorValor = require('./menorValor');
 
-function insertionSort(lista){
 
-    for (let atual = 0; atual < lista.langht; atual++){
-         let analise = atual;
+for (let atual = 0; atual < livros.length; atual++){
+let menor = menorValor(livros, atual);
 
-         while (analise > 0 && lista[analise].preco < lista[analise - 1].preco) {
-    }
-      console.log(lista);
-      console
+let livroAtual = livros[atual];
+let levroMenorPreco = livros[menor];
+
+
+
+ console.log('posicao atual', atual);
+ console.log('livro atual', livroAtual);
+ console.log('livro menor preco', livroMenorPreco);
+
+livros[atual] = livroMenorPreco;
+livros[menor] = livroAtual;
 }
-
